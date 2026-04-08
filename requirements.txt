@@ -1,32 +1,36 @@
 # ============================================================
 # Currency Note Detector — requirements.txt
 # Python 3.9 – 3.11 recommended
+# Install:  pip install -r requirements.txt
 # ============================================================
 
-# Core ML / Deep Learning
-tensorflow==2.15.0          # Keras is bundled inside TF 2.x
-# torch==2.2.2              # Uncomment if you prefer PyTorch
-# torchvision==0.17.2       # Uncomment if you prefer PyTorch
+# ── Core ML / Deep Learning ──────────────────────────────────
+tensorflow==2.15.0          # Keras 2.15 is bundled; includes MobileNetV2
+# If you prefer TF 2.16+ (Keras 3) pin instead:
+# tensorflow==2.16.2
+# keras==3.3.3
 
-# Data handling
+# ── Data handling ─────────────────────────────────────────────
 numpy==1.26.4
 pandas==2.2.2
 scikit-learn==1.4.2
 
-# Image processing
+# ── Image processing ──────────────────────────────────────────
 Pillow==10.3.0
-opencv-python==4.9.0.80
+opencv-python==4.9.0.80     # cv2 — used for BGR↔RGB, Canny, Laplacian, etc.
 
-# Visualisation
+# ── Visualisation ─────────────────────────────────────────────
 matplotlib==3.9.0
 seaborn==0.13.2
 
-# Jupyter environment
+# ── Progress bars ─────────────────────────────────────────────
+tqdm==4.66.4                # used in feature-extraction loops
+
+# ── Jupyter environment ───────────────────────────────────────
 jupyter==1.0.0
 notebook==7.2.0
-ipywidgets==8.1.2           # for the file-upload widget in the detector notebook
-widgetsnbextension==4.0.11  # enables widgets inside classic Notebook
+ipywidgets==8.1.2           # interactive file-upload widget in detector notebook
+widgetsnbextension==4.0.11  # enables ipywidgets inside classic Notebook
 
-# Utilities
-tqdm==4.66.4
+# ── Utilities ─────────────────────────────────────────────────
 requests==2.32.3
